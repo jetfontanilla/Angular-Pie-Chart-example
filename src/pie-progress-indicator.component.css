@@ -1,0 +1,91 @@
+.rect-auto,
+.pie-container.above-fifty .slice {
+    clip: rect(auto, auto, auto, auto);
+}
+.pie,
+.pie-container .bar,
+.pie-container.above-fifty .fill {
+    position: absolute;
+    border: 0.08em solid black;
+    width: 0.84em;
+    height: 0.84em;
+    clip: rect(0em, 0.5em, 1em, 0em);
+    border-radius: 50%;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.pie-fill,
+.pie-container.above-fifty .bar:after,
+.pie-container.above-fifty .fill{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.pie-container.completed .fill {
+    clip: auto;
+}
+
+.pie-container {
+    position: relative;
+    font-size: 56px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    float: left;
+    margin: 0 0.1em 0.1em 0;
+    background-color: #cccccc;
+}
+.pie-container *,
+.pie-container *:before,
+.pie-container *:after {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.pie-container.center {
+    float: none;
+    margin: 0 auto;
+}
+.pie-container.big {
+    font-size: 240px;
+}
+.pie-container.small {
+    font-size: 56px;
+}
+
+.pie-background {
+    position: absolute;
+    content: " ";
+    border-radius: 50%;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 5px;
+}
+.pie-container .slice {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    clip: rect(0em, 1em, 1em, 0.5em);
+}
+
+.pie-container.dark {
+    background-color: #777777;
+}
+.pie-container.dark .bar,
+.pie-container.dark .fill {
+    border-color: #c6ff00 !important;
+}
+
+.pie-container.dark:after {
+    background-color: #666666;
+}

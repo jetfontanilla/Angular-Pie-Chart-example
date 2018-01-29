@@ -1,0 +1,8 @@
+<div class="pie-container" [class.above-fifty]="!isLessThanHalf()" [class.completed]="isCompleted()">
+    <div class="slice">
+        <div class="bar" [style.transform]="getTransform()"></div>
+        <div class="fill"></div>
+    </div>
+    <div class="pie-background"></div>
+</div>
+
